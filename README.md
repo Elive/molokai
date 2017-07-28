@@ -1,3 +1,25 @@
+Vim colorscheme for Readability and Beauty for Coding
+=====================================================
+
+This theme is a small hack of the original and gorgeous Molokai colorscheme, it includes basically a few improvements and better overall integration to be used in Elive
+
+* friendly and beautiful for the eyes
+* Easy to identify what kind of element is each piece of code
+* psychology of colors (green = good, red = bad, yellow = hilight, magenta = alert, etc)
+* Lower Contrast for less-important things like comments, visual selections, extra whitespaces in the end of the lines
+* High contrast for important things like:
+  * important notes like TODO/FIXME/XXX
+  * folded blocks
+  * hilighted search
+  * marks
+  * functions
+
+It works in both gvim (gui) and 256-color terminals
+
+---
+
+## (Original Readme from the cloned colorscheme):
+
 # Molokai Color Scheme for Vim
 
 Molokai is a Vim port of the monokai theme for TextMate originally created by Wimer Hazenberg.
