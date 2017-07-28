@@ -18,7 +18,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
+let g:colors_name="elive-molokai"
 
 if exists("g:molokai_original")
     let s:molokai_original = g:molokai_original
@@ -130,6 +130,55 @@ else
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
 end
+
+" Elive Improvements:
+hi SignifySignAdd       guifg=#5FD75F guibg=#005F87 gui=bold
+"hi SignifySignDelete      ctermfg= ctermbg=
+"hi SignifySignChange      ctermfg= ctermbg=
+
+hi ShowMarksHLl         guifg=#0A0A0A guibg=#5F87FF gui=bold
+hi ShowMarksHLm         guifg=#0A0A0A guibg=#AF5FFF gui=bold
+hi ShowMarksHLu         guifg=#0A0A0A guibg=#5F87FF gui=bold
+hi ShowMarksHLo         guifg=#0A0A0A guibg=#87FF00 gui=bold
+
+hi htmlLink             guifg=#5F87FF gui=underline
+
+hi Todo                 guifg=#0A0A0A guibg=#AF00AF gui=bold
+
+hi localWhitespaceError guibg=#121212
+hi localWhitespace      guibg=#444444
+
+hi Search               guifg=#080808 guibg=#FFAF00
+hi IncSearch            guifg=#080808 guibg=#FFFF00
+
+" TODO & IDEAS:
+" function names in C
+" call s:HL('CUserFunction',   'strings2', '', 'bold')
+"
+" gitDiff:
+" diffRemoved diffAdded diffFile diffNewFile diffLine
+" DiffDelete DiffAdd DiffChange DiffText ?
+"
+"hi localWhitespaceError         ctermfg=232 ctermbg=118  cterm=bold
+"hi localWhitespace         ctermfg=232 ctermbg=118  cterm=bold
+"
+"hi Folded                  ctermfg=232 ctermbg=165
+"
+"
+" Others
+"
+" Mark splits deeper?
+"hi VertSplit         ctermbg=240
+"hi TabLine         ctermbg=240
+"hi TabLineFill         ctermbg=240
+"hi TabLineSel         ctermbg=240
+"hi StatusLineNC         ctermbg=240
+"hi StatusLine         ctermbg=240
+"hi Folded         ctermbg=240
+"hi NonText         ctermbg=240
+"hi CursorLine         ctermbg=240
+"hi CursorColumn        ctermbg=240
+
 
 "
 " Support for 256-color terminal
@@ -269,6 +318,36 @@ if &t_Co > 255
        hi NonText         ctermfg=239
        hi SpecialKey      ctermfg=239
    endif
+
+   " Elive Improvements
+   " git status signs in the left (Add, Delete, Change)
+   hi SignifySignAdd       ctermfg=77  ctermbg=24  cterm=bold
+
+   " marks in code, like for ma or 'a
+   hi ShowMarksHLl         ctermfg=232 ctermbg=69  cterm=bold
+   hi ShowMarksHLm         ctermfg=232 ctermbg=135 cterm=bold
+   hi ShowMarksHLu         ctermfg=232 ctermbg=69  cterm=bold
+   hi ShowMarksHLo         ctermfg=232 ctermbg=118 cterm=bold
+
+   " HTML links, underlined and blue
+   hi htmlLink             ctermfg=69  cterm=underline
+
+   " Hilight the TODO / XXX / FIXME entries deeply,
+   " so we should not have them in our code
+   hi Todo                 ctermfg=232 ctermbg=127 cterm=bold
+
+   " We should never see these whitespaces, so default bg:
+   hi localWhitespaceError ctermbg=233
+   " FIXME: next one not works:
+   hi localWhitespace      ctermbg=238
+
+   " Hilight when searching too
+   hi Search          ctermfg=232   ctermbg=214
+   "hi Search               ctermfg=232   ctermbg=220
+   "hi Search          ctermfg=232   ctermbg=226
+   "hi IncSearch       ctermfg=232   ctermbg=228
+   hi IncSearch            ctermfg=232   ctermbg=226
+
 end
 
 " Must be at the end, because of ctermbg=234 bug.
