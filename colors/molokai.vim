@@ -148,8 +148,8 @@ hi Todo                 guifg=#0A0A0A guibg=#AF00AF gui=bold
 hi localWhitespaceError guibg=#121212
 hi localWhitespace      guibg=#444444
 
-hi Search               guifg=#080808 guibg=#FFAF00
-hi IncSearch            guifg=#080808 guibg=#FFFF00
+hi Search               guifg=#000000 guibg=#FFAF00
+hi IncSearch            guifg=#000000 guibg=#FFFF00
 
 " TODO & IDEAS:
 " function names in C
@@ -342,11 +342,11 @@ if &t_Co > 255
    hi localWhitespace      ctermbg=238
 
    " Hilight when searching too
-   hi Search          ctermfg=232   ctermbg=214
+   hi Search               ctermfg=232   ctermbg=214 cterm=NONE
    "hi Search               ctermfg=232   ctermbg=220
-   "hi Search          ctermfg=232   ctermbg=226
-   "hi IncSearch       ctermfg=232   ctermbg=228
-   hi IncSearch            ctermfg=232   ctermbg=226
+   "hi Search               ctermfg=232   ctermbg=226
+   "hi IncSearch            ctermfg=232   ctermbg=228
+   hi IncSearch            ctermfg=226   ctermbg=232
 
 end
 
